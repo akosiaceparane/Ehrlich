@@ -37,6 +37,9 @@
   .header__nav .nav-close {
     display: block;
   }
+  .header__hamburger {
+    display: flex;
+  }
 
   .footer {
     padding: 30px;
@@ -62,6 +65,20 @@
   }
   .footer__info ul li a {
     font-size: 20px;
+  }
+
+  /* Banner */
+  .banner {
+    background-position: center;
+  }
+  .banner__title {
+    font-size: 35px;
+  }
+  .banner__image {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

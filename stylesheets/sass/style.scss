@@ -1,12 +1,24 @@
 @use "sass:color";
 $textFonts: 'Tisa Sans Pro';
+$textBoldFonts: 'Tisa Sans Pro Black';
 $whiteFontColor: #fff;
 
 .header{
   padding: 50px 40px;
   display: flex;
   align-items: center;
-  
+  position: fixed;
+  top:0;
+  background: transparent;
+  width: 100%;
+  transition: all .3s ease;
+  z-index: 999;
+
+  &--shrink{
+    padding: 30px 40px;
+    background-color: white;
+  }
+
   &__logo{
     a{
       font-family: 'Kabrio';
@@ -16,6 +28,7 @@ $whiteFontColor: #fff;
       font-size: 20px;
     }
   }
+
   &__nav{
     display: flex;
     flex-wrap: wrap;
@@ -47,6 +60,11 @@ $whiteFontColor: #fff;
           text-decoration: none;
           white-space: nowrap;
           font-family: $textFonts;
+          transition: all .3s ease;
+      
+          &:hover{
+            color: darken(#A08B81, 20%)
+          }
         }
       }
     }
@@ -95,7 +113,7 @@ $whiteFontColor: #fff;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-
+      display: none;
       em {
         width: 35px;
         height: 5px;
@@ -103,6 +121,62 @@ $whiteFontColor: #fff;
         margin: 3.5px 0;
         border-radius: 3px;
       }
+  }
+}
+
+.banner{
+  background: url(../../assets/images/homepage-bg.png);
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0;
+  background-size: cover;
+  background-position: center right;
+
+  &__contents{
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title{
+    font-family: $textBoldFonts;
+    font-weight: 900;
+    font-size: 46px;
+    color: #443636;
+  }
+
+  &__subtitle{
+    font-size: 20px;
+    color: #A08B81;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: $textFonts;
+    margin: 22px 0;
+  }
+
+  &__button{
+    padding: 15px 70px;
+    border: none;
+    background: #F6914E;
+    color: white;
+    font-family: $textFonts;
+    font-weight: 100;
+    border-radius: 5px;
+    box-shadow: 0px 20px 20px -3px #8a8a8a80;
+    transition: all .3s ease;
+
+    &:hover{
+      background: darken(#F6914E, 5%)
+    }
+  }
+
+  &__image{
+    width: 80%;
+  }
+  
+  #banner-wave{
+    position:absolute;
+    bottom:0%;
+    width: 100%;
   }
 }
 

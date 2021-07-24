@@ -1,3 +1,7 @@
+@media only screen and (max-width: 991px){
+
+}
+
 @media only screen and (max-width: 767px){
     .header{
         &__logo{
@@ -45,6 +49,10 @@
                 display: block;
             }
         }
+
+        &__hamburger{
+            display: flex;
+        }
     }
 
     .footer{
@@ -80,6 +88,22 @@
                     }
                 }
             }
+        }
+    }
+
+    /* Banner */
+    .banner{
+        background-position: center;
+
+        &__title{
+            font-size: 35px;
+        }
+
+        &__image{
+            width: 80%;
+            position: relative;
+            left: 50%;
+            transform:translateX(-50%);
         }
     }
 }

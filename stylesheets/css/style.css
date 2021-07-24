@@ -2,6 +2,16 @@
   padding: 50px 40px;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  background: transparent;
+  width: 100%;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.header--shrink {
+  padding: 30px 40px;
+  background-color: white;
 }
 .header__logo a {
   font-family: "Kabrio";
@@ -39,6 +49,10 @@
   text-decoration: none;
   white-space: nowrap;
   font-family: "Tisa Sans Pro";
+  transition: all 0.3s ease;
+}
+.header__nav ul li a:hover {
+  color: #6b5950;
 }
 .header__nav .nav-separator {
   width: 100%;
@@ -78,6 +92,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: none;
 }
 .header__hamburger em {
   width: 35px;
@@ -85,6 +100,55 @@
   background-color: #443636;
   margin: 3.5px 0;
   border-radius: 3px;
+}
+
+.banner {
+  background: url(../../assets/images/homepage-bg.png);
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0;
+  background-size: cover;
+  background-position: center right;
+}
+.banner__contents {
+  position: relative;
+  z-index: 1;
+}
+.banner__title {
+  font-family: "Tisa Sans Pro Black";
+  font-weight: 900;
+  font-size: 46px;
+  color: #443636;
+}
+.banner__subtitle {
+  font-size: 20px;
+  color: #A08B81;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Tisa Sans Pro";
+  margin: 22px 0;
+}
+.banner__button {
+  padding: 15px 70px;
+  border: none;
+  background: #F6914E;
+  color: white;
+  font-family: "Tisa Sans Pro";
+  font-weight: 100;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px -3px #8a8a8a80;
+  transition: all 0.3s ease;
+}
+.banner__button:hover {
+  background: #f58236;
+}
+.banner__image {
+  width: 80%;
+}
+.banner #banner-wave {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
 }
 
 .footer {
