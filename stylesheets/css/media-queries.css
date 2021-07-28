@@ -147,6 +147,13 @@
   .our-products .our-products-main-carousel__cell {
     flex-direction: column;
   }
+
+  .org-testimonials__image {
+    min-height: 450px;
+  }
+  .org-testimonials__image img {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 480px) {
   .header {
