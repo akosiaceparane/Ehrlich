@@ -39,6 +39,47 @@
                 });
                 $(this).removeAttr("data-wave-filename");
             });
+        },
+        initImageScrollSlider: function(){
+            /* Add Separator first */
+            $(".image-scroll-slider").append($('<div class="image-scroll-slider__separator"></div>'));
+            
+            $(window).on("scroll",function(){
+                $('.image-scroll-slider').each(function(){  
+                    var currentPosition = $(this).offset().top - $(window).scrollTop() - ($(this).height() / 2);
+                    var maxPosition = $(this).height();
+                    var percentage = Math.abs(currentPosition)/maxPosition*100;
+                    if(currentPosition <= 0 && Math.abs(currentPosition) <= $(this).height()){
+                        $(this).find('img:nth-child(2)').css({
+                            clipPath : `inset(0px ${percentage + "%"} 0px 0px)`,
+                        });
+                        $(this).find('.image-scroll-slider__separator').css({
+                            right: percentage + "%",
+                        });
+                        $(this).find('.image-scroll-slider__separator').show();
+                    }
+                    else{
+                        $(this).find('.image-scroll-slider__separator').hide(50);
+                    }
+                });
+            });
+        },
+        initToSlider(){
+            var sliderIds = [];
+            $('.to-slider').each(function(){
+                $(this).clone().appendTo(`#${$(this).attr("data-slider-id")}`);
+                if(!sliderIds.includes(`#${$(this).attr("data-slider-id")}`)) sliderIds.push(`#${$(this).attr("data-slider-id")}`);
+            });
+            $.each(sliderIds,function(i,e){
+                $(e).flickity({
+                    // options
+                    cellAlign: 'center',
+                    wrapAround: true,
+                    autoPlay: true,
+                    prevNextButtons: false,
+                    autoPlay: 2000,
+                });
+            });
         }
     }
 
@@ -48,6 +89,12 @@
 
         /* Initialize Lottie */
         app.initLottie();
+
+        /* Initialize Image Scroll Slider */
+        app.initImageScrollSlider();
+
+        /* Initialize To Slider */
+        app.initToSlider();
 
 
 
