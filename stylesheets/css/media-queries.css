@@ -70,15 +70,41 @@
   /* Banner */
   .banner {
     background-position: center;
+    padding: 150px 0;
   }
   .banner__title {
     font-size: 35px;
+    text-align: center;
+  }
+  .banner__subtitle {
+    text-align: center;
+    width: 100%;
+    white-space: unset;
+  }
+  .banner__button {
+    margin: 0 auto;
   }
   .banner__image {
-    width: 80%;
+    width: 100%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    padding: 30px 25px;
+  }
+  .header__logo a {
+    font-size: 20px;
+  }
+
+  .footer__logo a {
+    font-size: 30px;
+  }
+
+  .banner {
+    padding: 100px 0;
   }
 }
 

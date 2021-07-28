@@ -1,3 +1,9 @@
+.banner-wave {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+
 .header {
   padding: 50px 40px;
   display: flex;
@@ -106,7 +112,7 @@
   background: url(../../assets/images/homepage-bg.png);
   position: relative;
   overflow: hidden;
-  padding: 150px 0;
+  padding: 190px 0;
   background-size: cover;
   background-position: center right;
 }
@@ -117,7 +123,7 @@
 .banner__title {
   font-family: "Tisa Sans Pro Black";
   font-weight: 900;
-  font-size: 46px;
+  font-size: 47px;
   color: #443636;
 }
 .banner__subtitle {
@@ -144,11 +150,7 @@
 }
 .banner__image {
   width: 80%;
-}
-.banner #banner-wave {
-  position: absolute;
-  bottom: 0%;
-  width: 100%;
+  object-fit: contain;
 }
 
 .footer {
