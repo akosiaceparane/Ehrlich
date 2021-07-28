@@ -65,6 +65,42 @@ body{
         opacity: 0.9;
       }
     }
+
+    &.with-palm-bg{
+      overflow: hidden;
+
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../../assets/images/palm-left.png);
+        width: 285px;
+        height: 460px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+  
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(../../assets/images/palm-right.png);
+        width: 285px;
+        height: 460px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 1;
+        transform: translateX(60%);
+      }
+  
+      .container{
+        z-index: 2;
+        position: relative;
+      }
+    }
   }
 }
 
@@ -379,6 +415,10 @@ body{
     z-index: 1;
   }
 
+  .banner-wave{
+    z-index: 1;
+  }
+
   &__image{
     width: 100%;
     height: 100%;
@@ -439,6 +479,19 @@ body{
       font-size: 17px;
       margin: 0;
     }
+  }
+}
+
+.its-simple-really{
+  background-color: #FAEAD8;
+  
+  .section__subtitle{
+    text-align: left;
+  }
+
+  &__desc{
+    font-family: $textFonts;
+    color: $textColorOrange;
   }
 }
 

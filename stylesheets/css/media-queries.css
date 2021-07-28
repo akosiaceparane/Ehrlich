@@ -8,11 +8,23 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .section__title {
+  body .section {
+    padding-bottom: 150px !important;
+  }
+  body .section__title {
     text-align: center;
   }
-  .section__subtitle {
+  body .section__subtitle {
     text-align: center;
+  }
+  body .section.with-palm-bg:before {
+    height: 200px;
+    width: 90px;
+  }
+  body .section.with-palm-bg:after {
+    height: 200px;
+    width: 60px;
+    transform: translate(10%, 50%);
   }
 
   .header__logo {
@@ -123,6 +135,13 @@
   .love-it-or-its-on-us__desc {
     padding: 150px 0;
     align-items: center;
+  }
+
+  .its-simple-really .section__subtitle {
+    text-align: center;
+  }
+  .its-simple-really__desc {
+    text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
