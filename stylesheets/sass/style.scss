@@ -27,15 +27,80 @@ body{
       text-align: center;
       margin-bottom: 20px;
     }
+
+    &__title-logo{
+      height: 55px;
+      width: 55px;
+      margin-bottom: 20px;
+    }
+
+    &__main-button {
+      height: 55px;
+      width: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3C562C;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      border-radius: 10px;
+      transition: all .3s ease;
+      font-family: $textFonts;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      font-size: 14px;
+
+      &.green-button{
+        background-color: #3C562C;
+      }
+
+      &.orange-button{
+        background-color: #F6914E;
+      }
+
+      &:hover{
+        opacity: 0.9;
+      }
+    }
   }
 }
 
+/* Independent Components Styles First */
 .banner-wave{
   position:absolute;
   bottom:0%;
   width: 100%;
 }
 
+.image-scroll-slider {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+
+  &__separator{
+    height: 100%;
+    width: 5px;
+    background: #443636;
+    top: 50%;
+    transform: translate(50%, -50%);
+    position: absolute;
+  }
+
+  img{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+/* Then section styles */
 .header{
   padding: 50px 40px;
   display: flex;
@@ -238,6 +303,63 @@ body{
       color: $sectionTitleFontColor;
       font-family: $textFonts;
       font-weight: 500;
+    }
+  }
+}
+
+.about-our-cbd{
+  position: relative;
+  padding: 20px 0;
+  background-color: #ffffff;
+  padding-bottom: 200px;
+
+  .aoc-entry{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+
+    &__icon{
+      min-height: 85px;
+      margin-bottom: 20px;
+      object-fit: contain;
+      object-position: bottom;
+    }
+
+    &__title{
+      font-family: $textFonts;
+      font-weight: 900;
+      font-size: 16px;
+      color: $sectionTitleFontColor;
+      padding-bottom: 10px;
+      border-bottom: solid 2px #F6914E;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    &__desc{
+      font-family: $textFonts;
+      font-weight: 100;
+      font-size: 16px;
+      color: $textColorOrange;
+      text-align: center;
+      min-height: 240px;
+    }
+
+    &:last-child{
+      
+      .aoc-entry__desc{
+        min-height: unset;
+      }
+    }
+  }
+    
+  .flickity-page-dots{
+    .dot{
+      background: #F6914E;
     }
   }
 }
