@@ -94,16 +94,52 @@
     /* Banner */
     .banner{
         background-position: center;
+        padding: 150px 0;
 
         &__title{
             font-size: 35px;
+            text-align: center;
+        }
+
+        &__subtitle{
+            text-align: center;
+            width: 100%;
+            white-space: unset;
+        }
+
+        &__button{
+            margin: 0 auto;
         }
 
         &__image{
-            width: 80%;
+            width: 100%;
             position: relative;
             left: 50%;
             transform:translateX(-50%);
         }
     }
+}
+
+@media only screen and (max-width: 480px){
+    .header{
+        padding: 30px 25px;
+
+        &__logo{
+            a{
+                font-size: 20px;
+            }
+        }
+    }
+    .footer{
+        &__logo{
+            a{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .banner{
+        padding: 100px 0;
+    }
+    
 }

@@ -27,24 +27,33 @@
             });
             
         },
-
-        initBanner: function(){
-            lottie.loadAnimation({
-                container: document.getElementById('banner-wave'), // the dom element that will contain the animation
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: 'scripts/data-color-1.json' // the path to the animation json
+        initLottie(){
+            $('.banner-wave').each(function(){
+                var waveFileName = $(this).attr("data-wave-filename");
+                lottie.loadAnimation({
+                    container: this, // the dom element that will contain the animation
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: `scripts/${waveFileName}` // the path to the animation json
+                });
+                $(this).removeAttr("data-wave-filename");
             });
         }
     }
 
 	jQuery(document).ready( function() {
 
+        /* Load All Independent Components first */
+
+        /* Initialize Lottie */
+        app.initLottie();
+
+
+
+        /* Load per section function after */
+
 		/* Initialize Header */
 		app.initHeader();
-
-        /* Initialize Banner */
-        app.initBanner();
 	});
 })();

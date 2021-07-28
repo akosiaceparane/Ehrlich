@@ -2,6 +2,15 @@
 $textFonts: 'Tisa Sans Pro';
 $textBoldFonts: 'Tisa Sans Pro Black';
 $whiteFontColor: #fff;
+$sectionTitleFontSize: 35px;
+$sectionTitleFontColor: #443636;
+$textColorOrange: #AE8C7A;
+
+.banner-wave{
+  position:absolute;
+  bottom:0%;
+  width: 100%;
+}
 
 .header{
   padding: 50px 40px;
@@ -128,7 +137,7 @@ $whiteFontColor: #fff;
   background: url(../../assets/images/homepage-bg.png);
   position: relative;
   overflow: hidden;
-  padding: 150px 0;
+  padding: 190px 0;
   background-size: cover;
   background-position: center right;
 
@@ -140,7 +149,7 @@ $whiteFontColor: #fff;
   &__title{
     font-family: $textBoldFonts;
     font-weight: 900;
-    font-size: 46px;
+    font-size: 47px;
     color: #443636;
   }
 
@@ -171,12 +180,7 @@ $whiteFontColor: #fff;
 
   &__image{
     width: 80%;
-  }
-  
-  #banner-wave{
-    position:absolute;
-    bottom:0%;
-    width: 100%;
+    object-fit: contain;
   }
 }
 
