@@ -55,8 +55,13 @@ body .section__main-button:hover {
 /* Independent Components Styles First */
 .banner-wave {
   position: absolute;
-  bottom: 0%;
   width: 100%;
+}
+.banner-wave.wave-bottom {
+  bottom: -1px;
+}
+.banner-wave.wave-top {
+  top: -1px;
 }
 
 .image-scroll-slider {
@@ -266,7 +271,7 @@ body .section__main-button:hover {
   position: relative;
   padding: 20px 0;
   background-color: #ffffff;
-  padding-bottom: 200px;
+  padding-bottom: 20px !important;
 }
 .about-our-cbd .aoc-entry {
   width: 100%;
@@ -306,6 +311,68 @@ body .section__main-button:hover {
 }
 .about-our-cbd .flickity-page-dots .dot {
   background: #F6914E;
+}
+
+.love-it-or-its-on-us {
+  background-color: #FBF4EE;
+}
+.love-it-or-its-on-us .banner-wave.wave-top {
+  transform: rotate(180deg);
+  z-index: 1;
+}
+.love-it-or-its-on-us__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 60%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: left;
+}
+.love-it-or-its-on-us__desc {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 300px 0;
+}
+.love-it-or-its-on-us .sticker {
+  width: 100%;
+  background: white;
+  display: flex;
+  margin: 10px 0;
+  border-radius: 50px;
+  padding: 0 20px;
+}
+.love-it-or-its-on-us .sticker__icon {
+  height: 100%;
+  width: 80px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.love-it-or-its-on-us .sticker__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.love-it-or-its-on-us .sticker__texts {
+  padding: 15px;
+  width: 100%;
+}
+.love-it-or-its-on-us .sticker__title {
+  font-family: "Tisa Sans Pro";
+  color: #453636;
+  font-size: 20px;
+}
+.love-it-or-its-on-us .sticker__desc {
+  font-family: "Tisa Sans Pro";
+  color: #AE8C7A;
+  font-size: 17px;
+  margin: 0;
 }
 
 .footer {
