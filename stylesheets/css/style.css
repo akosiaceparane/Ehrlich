@@ -523,6 +523,51 @@ body .section.with-palm-bg .container {
   text-align: center;
 }
 
+.org-testimonials {
+  background: linear-gradient(180deg, #faead8, #E8D7C8);
+}
+.org-testimonials .org-testimonial-entry {
+  margin-bottom: 110px;
+}
+.org-testimonials .org-testimonial-entry:before {
+  content: "";
+  height: 23px;
+  width: 100%;
+  background-image: url(../../assets/images/quotations.png);
+  background-size: contain;
+  background-position: center;
+  display: block;
+  background-repeat: no-repeat;
+  margin-bottom: 18px;
+}
+.org-testimonials .org-testimonial-entry__text {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Tisa Sans Pro";
+  color: #453636;
+  margin-bottom: 18px;
+}
+.org-testimonials .org-testimonial-entry__logo {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.org-testimonials .org-testimonial-entry__logo img {
+  height: 100%;
+}
+.org-testimonials__image {
+  position: relative;
+}
+.org-testimonials__image img {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
 .footer {
   padding: 70px;
   background-color: #3C562C;
