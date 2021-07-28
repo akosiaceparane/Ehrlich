@@ -3,8 +3,32 @@ $textFonts: 'Tisa Sans Pro';
 $textBoldFonts: 'Tisa Sans Pro Black';
 $whiteFontColor: #fff;
 $sectionTitleFontSize: 35px;
-$sectionTitleFontColor: #443636;
+$sectionTitleFontColor: #453636;
 $textColorOrange: #AE8C7A;
+
+body{
+  scroll-behavior: smooth;
+
+  .section{
+    position: relative;
+    padding: 20px 0 300px;
+
+    &__title{
+      font-size: $sectionTitleFontSize;
+      color: $sectionTitleFontColor;
+      font-family: $textBoldFonts;
+      margin-bottom: 40px;
+    }
+
+    &__subtitle{
+      font-size: 18px;
+      color: $textColorOrange;
+      font-family: $textFonts;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
 
 .banner-wave{
   position:absolute;
@@ -137,7 +161,7 @@ $textColorOrange: #AE8C7A;
   background: url(../../assets/images/homepage-bg.png);
   position: relative;
   overflow: hidden;
-  padding: 190px 0;
+  padding: 190px 0 300px;
   background-size: cover;
   background-position: center right;
 
@@ -181,6 +205,40 @@ $textColorOrange: #AE8C7A;
   &__image{
     width: 80%;
     object-fit: contain;
+  }
+}
+
+.vermas-benefits{
+  background-color: #faead8;
+
+  .vermas-benefits-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 25px -15px rgb(0 0 0 / 50%);
+
+    &__image {
+      width: 100%;
+      height: 350px;
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__desc {
+      padding: 20px 55px;
+      text-align: center;
+      font-size: 20px;
+      color: $sectionTitleFontColor;
+      font-family: $textFonts;
+      font-weight: 500;
+    }
   }
 }
 
