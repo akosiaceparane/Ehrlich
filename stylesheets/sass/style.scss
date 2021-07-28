@@ -353,7 +353,7 @@ body{
 .about-our-cbd{
   position: relative;
   padding: 20px 0;
-  background-color: #ffffff;
+  background-color: #fefaf8;
   padding-bottom: 20px !important;
 
   .aoc-entry{
@@ -494,6 +494,129 @@ body{
     color: $textColorOrange;
   }
 }
+.our-products{
+  background: linear-gradient(180deg, white, #FBF3EE, white);
+
+  .section__title{
+    margin-bottom: 75px
+  }
+
+  .section__main-button{
+    margin-top: 75px;
+  }
+
+  .our-products-main-carousel{
+    margin-bottom: 50px;
+
+    &__cell{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    &__image {
+      max-width: 380px;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img{
+        width: 90%;
+      }
+    }
+
+    &__info{
+      max-width: 380px;
+      width: 90%;
+      border: solid 1px #E2D8CE;
+      padding: 50px 35px;
+      border-radius: 20px;
+      font-family: $textFonts;
+
+      h5{
+        color: $sectionTitleFontColor;
+        margin-bottom: 15px;
+      }
+
+      small{
+        font-family: $textBoldFonts;
+        color: $sectionTitleFontColor;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      p{
+        color: $textColorOrange;
+      }
+
+      em{
+        color: $textColorOrange;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 40px;
+      }
+
+      a{
+        border: solid 2px #E2D8CE;
+        padding: 10px 35px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all .3s ease;
+        color: $sectionTitleFontColor;
+
+        &:hover{
+          background-color: $sectionTitleFontColor;
+          color: white;
+        }
+      }
+    }
+  }
+  .our-products-carousel-nav{
+    &__cell{
+      width: 160px;
+      margin: 0 15px;
+
+      &.is-selected.is-nav-selected{
+        .our-products-carousel-nav__image{
+          margin-top: 0 !important;
+          padding-top: 18px !important;
+          height: 178px;
+        }
+      }
+    }
+    &__image{
+      width: 100%;
+      height: 160px;
+      padding: 0 45px;
+      background-color: white;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px #E2D8CE;
+      margin-top: 18px;
+      transition: all .3s ease;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    &__info{
+      margin-top: 25px;
+    }
+
+    &__title{
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
 
 .footer{
   padding: 70px;
