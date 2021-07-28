@@ -8,98 +8,98 @@ $textColorOrange: #AE8C7A;
 
 body{
   scroll-behavior: smooth;
+}
 
-  .section{
+.section{
+  position: relative;
+  padding: 20px 0 300px;
+
+  &__title{
+    font-size: $sectionTitleFontSize;
+    color: $sectionTitleFontColor;
+    font-family: $textBoldFonts;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle{
+    font-size: 18px;
+    color: $textColorOrange;
+    font-family: $textFonts;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__title-logo{
+    height: 55px;
+    width: 55px;
+    margin-bottom: 20px;
+  }
+
+  &__main-button {
+    height: 55px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C562C;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 10px;
+    transition: all .3s ease;
+    font-family: $textFonts;
+    margin: 0 auto;
     position: relative;
-    padding: 20px 0 300px;
+    z-index: 1;
+    font-size: 14px;
 
-    &__title{
-      font-size: $sectionTitleFontSize;
-      color: $sectionTitleFontColor;
-      font-family: $textBoldFonts;
-      margin-bottom: 40px;
-    }
-
-    &__subtitle{
-      font-size: 18px;
-      color: $textColorOrange;
-      font-family: $textFonts;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    &__title-logo{
-      height: 55px;
-      width: 55px;
-      margin-bottom: 20px;
-    }
-
-    &__main-button {
-      height: 55px;
-      width: 280px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    &.green-button{
       background-color: #3C562C;
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      border-radius: 10px;
-      transition: all .3s ease;
-      font-family: $textFonts;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-      font-size: 14px;
-
-      &.green-button{
-        background-color: #3C562C;
-      }
-
-      &.orange-button{
-        background-color: #F6914E;
-      }
-
-      &:hover{
-        opacity: 0.9;
-      }
     }
 
-    &.with-palm-bg{
-      overflow: hidden;
+    &.orange-button{
+      background-color: #F6914E;
+    }
 
-      &:before{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(../../assets/images/palm-left.png);
-        width: 285px;
-        height: 460px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 1;
-      }
-  
-      &:after{
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: url(../../assets/images/palm-right.png);
-        width: 285px;
-        height: 460px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 1;
-        transform: translateX(60%);
-      }
-  
-      .container{
-        z-index: 2;
-        position: relative;
-      }
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+
+  &.with-palm-bg{
+    overflow: hidden;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url(../../assets/images/palm-left.png);
+      width: 285px;
+      height: 460px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    &:after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url(../../assets/images/palm-right.png);
+      width: 285px;
+      height: 460px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 1;
+      transform: translateX(60%);
+    }
+
+    .container{
+      z-index: 2;
+      position: relative;
     }
   }
 }
@@ -664,6 +664,124 @@ body{
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
+    }
+  }
+}
+
+.people-testimonials{
+  padding: 100px 0px 170px;
+  
+  .section__title{
+    margin-bottom: 75px;
+  }
+
+  &-carousel{
+  
+    &__entry{
+      max-width: 370px;
+      width: 100%;
+      padding: 50px 30px 30px;
+      background-color: #F6F0EF;
+      border-radius: 20px;
+      position: relative;
+      margin: 12px;
+
+      &:before{
+        content: '';
+        height: 33px;
+        width: 45px;
+        background-image:url(../../assets/images/quotations.png);
+        background-size: contain;
+        background-position: center;
+        display: block;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -5px;
+        left: -10px;
+      }
+
+      &:after{
+        content: '';
+        height: 33px;
+        width: 45px;
+        background-image:url(../../assets/images/quotations.png);
+        background-size: contain;
+        background-position: center;
+        display: block;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: -5px;
+        right: -10px;
+        transform: scaleX(-1);
+      }
+    }
+
+    &__image{
+      width: 100%;
+      padding: 23px;
+
+      img{
+        max-width: 165px;
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translatex(-50%);
+      }
+    }
+
+    &__product{
+      color: #3C562C;
+      font-family: $textFonts;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    &__testimony{
+      color: $textColorOrange;
+      font-family: $textFonts;
+      font-size: 17px;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    &__logo{
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+
+      img{
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+
+    &__name{
+      color: #3C562C;
+      font-family: $textFonts;
+      font-size: 14px;
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .flickity-page-dots {
+      bottom: -70px;
+      display: flex;
+      width: 100%;
+
+      li{
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        height: 5px;
+        background: #D2CCCB;
+      }
     }
   }
 }

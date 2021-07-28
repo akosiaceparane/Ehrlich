@@ -95,6 +95,16 @@
                 pageDots: false,
                 prevNextButtons: false,
             });
+        },
+        initPeopleTestimonials(){
+            $('.people-testimonials-carousel').flickity({
+                cellAlign: 'center',
+                autoPlay: false,
+                prevNextButtons: false,
+                pageDots: true,
+                contain: true,
+                freeScroll: true,
+            });
         }
     }
 
@@ -120,5 +130,8 @@
 
         /* Initialize Our Products */
         app.initOurProducts();
+
+        /* Initialize People Testimonials */
+        app.initPeopleTestimonials();
 	});
 })();
