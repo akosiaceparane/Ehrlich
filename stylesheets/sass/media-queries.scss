@@ -13,13 +13,30 @@
 }
 
 @media only screen and (max-width: 767px){
-    .section{
-        &__title{
-            text-align: center;
-        }
-
-        &__subtitle{
-            text-align: center;
+    body{
+        .section{
+            padding-bottom: 150px !important;
+    
+            &__title{
+                text-align: center;
+            }
+    
+            &__subtitle{
+                text-align: center;
+            }
+    
+            &.with-palm-bg{
+                &:before{
+                    height: 200px;
+                    width: 90px;
+                }
+    
+                &:after{
+                    height: 200px;
+                    width: 60px;
+                    transform: translate(10%,50%);
+                }
+            }
         }
     }
     .header{
@@ -157,6 +174,16 @@
         &__desc{
             padding: 150px 0;
             align-items: center;
+        }
+    }
+
+    .its-simple-really{
+        .section__subtitle{
+            text-align: center;
+        }
+
+        &__desc{
+            text-align: center;
         }
     }
 }
