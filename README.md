@@ -17,6 +17,6 @@ This is my conversion of Ehrlich coding challenge into a live website.
 ##### Independent Components
 ---
 1. Image Scroll Slider (can be seen at About Our CBD section)
-  1.a. use `<div class="image-scroll-slider"></div>` with two images inside.
+  * use `<div class="image-scroll-slider"></div>` with two images inside.
 2. To Slider (can be seen at About Our CBD section)
-  2.a. add `data-slider-id` attribute to div in order to be cloned and appended to the div with the id that is same with the value;
+  * add `data-slider-id` attribute to div in order to be cloned and appended to the div with the id that is same with the value;
