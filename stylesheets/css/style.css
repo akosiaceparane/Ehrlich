@@ -671,6 +671,65 @@ body {
   background: #D2CCCB;
 }
 
+.before-footer {
+  height: 175px;
+  background: #EDD3C1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.before-footer > div {
+  width: calc(100%/3*1);
+}
+.before-footer a.back-to-top {
+  height: 37px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #c4ad9f;
+  border-radius: 5px;
+  color: #c4ad9f;
+  text-decoration: none;
+  font-family: "Tisa Sans Pro";
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease;
+}
+.before-footer a.back-to-top:hover {
+  background-color: #c4ad9f;
+  color: #EDD3C1;
+}
+.before-footer__logo {
+  text-align: center;
+}
+.before-footer__logo img {
+  height: 100px;
+  width: 100px;
+}
+.before-footer__our-shop a {
+  font-size: 35px;
+  color: #453636;
+  font-family: "Tisa Sans Pro Black";
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.before-footer__our-shop a img {
+  width: 65px;
+  height: 30px;
+  margin-left: 18px;
+  transition: all 0.3s ease;
+}
+.before-footer__our-shop a:hover img {
+  transform: translateX(10px);
+}
+
 .footer {
   padding: 70px;
   background-color: #3C562C;

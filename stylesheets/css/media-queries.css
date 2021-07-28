@@ -154,6 +154,17 @@
   .org-testimonials__image img {
     width: 70%;
   }
+
+  .before-footer {
+    padding: 25px 20px;
+  }
+  .before-footer__logo {
+    text-align: unset;
+    width: 20% !important;
+  }
+  .before-footer__our-shop {
+    width: 80% !important;
+  }
 }
 @media only screen and (max-width: 480px) {
   .header {
@@ -169,6 +180,17 @@
 
   .banner {
     padding: 100px 0;
+  }
+
+  .before-footer__logo img {
+    width: 58px;
+    height: 58px;
+  }
+  .before-footer__our-shop a {
+    font-size: 30px;
+  }
+  .before-footer__our-shop a img {
+    margin-left: 5px;
   }
 }
 

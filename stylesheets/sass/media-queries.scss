@@ -203,6 +203,19 @@
             }
         }
     }
+
+    .before-footer{
+        padding: 25px 20px;
+
+        &__logo{
+            text-align: unset;
+            width: 20% !important;
+        }
+
+        &__our-shop{
+            width: 80% !important;
+        }
+    }
 }
 
 @media only screen and (max-width: 480px){
@@ -225,6 +238,27 @@
 
     .banner{
         padding: 100px 0;
+    }
+
+    .before-footer{
+
+        &__logo{
+            
+            img{
+                width: 58px;
+                height: 58px;
+            }
+        }
+
+        &__our-shop{
+            a{
+                font-size: 30px;
+
+                img{
+                    margin-left: 5px;
+                }
+            }
+        }
     }
     
 }
