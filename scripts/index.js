@@ -80,6 +80,21 @@
                     autoPlay: 2000,
                 });
             });
+        },
+        initOurProducts(){
+            $('.our-products-main-carousel').flickity({
+                cellAlign: 'center',
+                autoPlay: false,
+                prevNextButtons: false,
+                pageDots: false,
+            });
+
+            $('.our-products-carousel-nav').flickity({
+                asNavFor: '.our-products-main-carousel',
+                contain: true,
+                pageDots: false,
+                prevNextButtons: false,
+            });
         }
     }
 
@@ -102,5 +117,8 @@
 
 		/* Initialize Header */
 		app.initHeader();
+
+        /* Initialize Our Products */
+        app.initOurProducts();
 	});
 })();

@@ -186,6 +186,14 @@
             text-align: center;
         }
     }
+
+    .our-products{
+        .our-products-main-carousel{
+            &__cell{
+                flex-direction: column;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 480px){
